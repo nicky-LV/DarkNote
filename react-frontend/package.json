@@ -17,7 +17,7 @@
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
     "react-hook-form": "^6.9.6",
-    "react-scripts": "4.0.0",
+    "react-scripts": "^4.0.0",
     "react-spring": "^8.0.27",
     "web-vitals": "^0.2.4"
   },
@@ -27,7 +27,6 @@
     "test": "node_modules/.bin/react-scripts test",
     "eject": "node_modules/.bin/react-scripts eject"
   },
-
   "engines": {
     "node": "12.18.3",
     "npm": "6.14.6"
@@ -49,5 +48,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
+    "react-refresh": "^0.9.0"
   }
 }
