@@ -1,0 +1,35 @@
+.sidebar{
+    height: 100vh;
+    background-color: #1E2027;
+    box-shadow: 5px 0 10px #21242b;
+}
+
+body{
+    background-color: #292C35;
+}
+
+.create-notebook-button{
+    align-content: center;
+    border: none;
+    border-radius: 0;
+    height: 3rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    align-self: flex-end;
+}
+
+.selected-note-name{
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.todo-list-row{
+    height: 300px;
+    overflow: hidden;
+}

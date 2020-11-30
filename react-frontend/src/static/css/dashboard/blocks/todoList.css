@@ -1,0 +1,34 @@
+.create-todo{
+    background-color: red;
+    width: 100%;
+}
+
+.todo-list{
+    width: 100%;
+}
+
+.todo{
+    border-bottom: 2px dashed #1E2027;
+
+}
+
+.todo-list-container{
+    padding: 1rem;
+    width: 80%;
+    height: 250px;
+}
+
+.add-todo-button-1{
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+
+.add-todo-button-2{
+    box-shadow: none;
+    outline: none;
+}
+
+.delete-todo-icon{
+    float: left;
+}

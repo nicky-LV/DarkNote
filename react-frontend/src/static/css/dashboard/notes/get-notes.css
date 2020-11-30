@@ -1,0 +1,73 @@
+.note-list{
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap
+}
+
+.note-notebook-name{
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.note-button{
+    width: 100%;
+    background-color: transparent;
+    height: 3rem;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.note-name{
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.note-button:hover{
+    background-color: #292C35;
+}
+
+.note-button:focus{
+    outline: none;
+}
+
+.note-button-active{
+    background-color: #292C35;
+    width: 100%;
+    height: 3rem;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.note-button-active:focus{
+    outline: none;
+}
+
+.create-note-button{
+    align-content: center;
+    border: none;
+    border-radius: 0;
+    height: 3rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    align-self: flex-end;
+}
+
+.back-button{
+    align-content: center;
+    border: none;
+    border-radius: 0;
+    position: absolute;
+    height: 3rem;
+    bottom: 0;
+    width: 100%;
+}

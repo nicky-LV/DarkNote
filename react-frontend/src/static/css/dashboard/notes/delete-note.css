@@ -1,0 +1,26 @@
+.delete-note-header{
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.delete-note-text{
+    font-family: "Open Sans", sans-serif;
+}
+
+.back-button{
+    align-content: center;
+    border: none;
+    border-radius: 0;
+    position: absolute;
+    height: 3rem;
+    bottom: 0;
+    width: 100%;
+}
+
+.delete-note-note-name{
+    font-family: "Poppins", sans-serif;
+}

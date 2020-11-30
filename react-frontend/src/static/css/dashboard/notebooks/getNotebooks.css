@@ -1,0 +1,48 @@
+.notebook-list{
+    background-color: #1E2027;
+    height: 100vh;
+}
+
+.notebook-button{
+    width: 100%;
+    height: 3rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+
+}
+
+.notebook-name{
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.notebook-button:hover{
+    background-color: #292C35;
+}
+
+.notebook-button:focus{
+    outline: none;
+}
+
+.notebook-header{
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.back-button{
+    align-content: center;
+    border: none;
+    border-radius: 0;
+    position: absolute;
+    height: 3rem;
+    bottom: 0;
+    width: 100%;
+}
