@@ -4,6 +4,8 @@
 
 .todo-list{
     width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .todo{
@@ -39,6 +41,9 @@
 }
 
 .add-todo-button-1{
+    width: 10%;
+    margin-left: 45%;
+    margin-right: 45%;
     box-shadow: none;
     outline: none;
     border: none;

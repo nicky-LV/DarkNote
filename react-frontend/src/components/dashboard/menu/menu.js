@@ -28,7 +28,7 @@ export const Menu = (props) => {
                     <Controls animation={slideFadeIn} />
                 </div>
             </div>
-            <div className="row todo-list-row mt-3">
+            <div className="row todo-list-row mt-4">
                 <div className="col-md">
                     <TodoContainer animation={slideUpFadeIn}/>
                 </div>
