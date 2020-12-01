@@ -21,9 +21,8 @@ export const TodoList = (props) => {
 
     const handleTodoDelete = (todo) => {
         const index = todoList.indexOf(todo)
-        const localStorageTodoList = JSON.parse(localStorage.getItem("todoList"))
-
-        console.log(localStorageTodoList.splice(index, 1))
+        todoList.splice(index, 1) // removes the todoItem from the list
+        localStorage.setItem("todoList", JSON.stringify(todoList))
         setTodoListChanged(true);
     }
 
@@ -34,14 +33,14 @@ export const TodoList = (props) => {
                 setShowCreateIcon(true);
             }
 
-            else if (JSON.parse(localStorage.getItem("todoList")).length > 0 && JSON.parse(localStorage.getItem("todoList")).length < 3){
+            else if (JSON.parse(localStorage.getItem("todoList")).length > 0 && JSON.parse(localStorage.getItem("todoList")).length < 4){
                 setTodoList(JSON.parse(localStorage.getItem("todoList")))
                 setShowCreateIcon(true);
             }
 
             else{
                 setTodoList(JSON.parse(localStorage.getItem("todoList")))
-                if (todoList.length === 3){
+                if (todoList.length === 4){
                     setShowCreateIcon(false);
                 }
             }
@@ -60,13 +59,15 @@ export const TodoList = (props) => {
                              onMouseEnter={() => setShowDeleteIcon(true)}
                              onMouseLeave={() => setShowDeleteIcon(false)}
                         >
-
-                            {showDeleteIcon && <DeleteIcon
-                                todo = {todo}
-                                handleTodoDelete={handleTodoDelete}
-                            />}
-
-                            <p className="text-light text-center">{todo}</p>
+                            <div className="delete-icon-div">
+                                {showDeleteIcon && <DeleteIcon
+                                    todo = {todo}
+                                    handleTodoDelete={handleTodoDelete}
+                                />}
+                            </div>
+                            <div className="todo-name-div">
+                                <p className="text-light text-center todo-name">{todo}</p>
+                            </div>
                         </div>
                     )
                 )}

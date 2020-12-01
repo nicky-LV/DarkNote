@@ -30,7 +30,7 @@ export const Menu = (props) => {
             </div>
             <div className="row todo-list-row">
                 <div className="col-md">
-                    <TodoContainer animation={slideUpFadeIn} />
+                    <TodoContainer animation={slideUpFadeIn}/>
                 </div>
 
             </div>

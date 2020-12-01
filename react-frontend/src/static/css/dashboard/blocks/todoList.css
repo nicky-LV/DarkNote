@@ -1,5 +1,4 @@
 .create-todo{
-    background-color: red;
     width: 100%;
 }
 
@@ -8,14 +7,35 @@
 }
 
 .todo{
-    border-bottom: 2px dashed #1E2027;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.delete-icon-div{
+    width: 30px;
+}
+
+.delete-todo-icon{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.todo-name-div{
+    width: 100%;
+    text-align: center;
+    padding-right: 2rem;
+    height: 3rem;
+    line-height: 3rem;
 }
 
 .todo-list-container{
-    padding: 1rem;
-    width: 80%;
-    height: 250px;
+    width: 100%;
+    height: 100%;
+    margin-left: 1rem;
 }
 
 .add-todo-button-1{
@@ -31,4 +51,10 @@
 
 .delete-todo-icon{
     float: left;
+}
+
+.form-control:focus{
+    box-shadow: none;
+    outline: none;
+    border: white;
 }

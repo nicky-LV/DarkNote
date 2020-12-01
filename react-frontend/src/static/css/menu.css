@@ -33,3 +33,7 @@ body{
     height: 300px;
     overflow: hidden;
 }
+
+.todo-list-jumbotron{
+    height: 100%;
+}

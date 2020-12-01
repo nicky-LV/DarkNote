@@ -4,7 +4,7 @@ import {TodoList} from "./todoList";
 
 export const TodoContainer = (props) => {
     return (
-        <animated.div style={props.animation} className="jumbotron block">
+        <animated.div style={props.animation} className="jumbotron block todo-list-jumbotron">
             <div className="row">
                 <div className="col-md-7">
                     <h2>Tasks</h2>

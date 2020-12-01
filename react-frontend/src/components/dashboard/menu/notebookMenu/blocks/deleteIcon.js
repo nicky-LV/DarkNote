@@ -8,12 +8,12 @@ export const DeleteIcon = (props) => {
     })
 
     return(
-                <animated.p
+                <animated.button
                     style={fadeIn}
                     alt="delete todo"
                     onClick={ () => props.handleTodoDelete(props.todo)}
                     className="delete-todo-icon"
-                >-</animated.p>
+                >-</animated.button>
 
     )
 }
