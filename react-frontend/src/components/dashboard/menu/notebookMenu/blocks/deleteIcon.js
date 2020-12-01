@@ -11,7 +11,7 @@ export const DeleteIcon = (props) => {
                 <animated.p
                     style={fadeIn}
                     alt="delete todo"
-                    onClick={props.handleTodoDelete}
+                    onClick={ () => props.handleTodoDelete(props.todo)}
                     className="delete-todo-icon"
                 >-</animated.p>
 

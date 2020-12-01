@@ -3,6 +3,7 @@ import {Button} from "react-bootstrap";
 import {DeleteIcon} from "../deleteIcon";
 import {CreateTodoMenu1} from "./createTodoMenu";
 import "../../../../../../static/css/dashboard/blocks/todoList.css";
+import React from 'react';
 
 export const TodoList = (props) => {
     const [todoList, setTodoList] = useState([]);
@@ -20,29 +21,21 @@ export const TodoList = (props) => {
 
     const handleTodoDelete = (todo) => {
         const index = todoList.indexOf(todo)
-        console.log(index)
-        if (index > -1) {
-            const modifiedTodoList = todoList.splice(index, 1);
-            setTodoList(modifiedTodoList);
-            localStorage.setItem("todoList", JSON.stringify(modifiedTodoList));
-            setTodoListChanged(true);
-        }
+        const localStorageTodoList = JSON.parse(localStorage.getItem("todoList"))
 
-        else{
-            localStorage.removeItem("todoList")
-            setTodoListChanged(true);
-        }
+        console.log(localStorageTodoList.splice(index, 1))
+        setTodoListChanged(true);
     }
 
     useEffect( () => {
             setTodoListChanged(false);
             setCreateTodoMenu(false);
-            console.log(localStorage.getItem("todoList").length)
-            if (localStorage.getItem("todoList") === null){
+            if (localStorage.getItem("todoList") === null || JSON.parse(localStorage.getItem("todoList")).length === 0){
                 setShowCreateIcon(true);
             }
 
             else if (JSON.parse(localStorage.getItem("todoList")).length > 0 && JSON.parse(localStorage.getItem("todoList")).length < 3){
+                setTodoList(JSON.parse(localStorage.getItem("todoList")))
                 setShowCreateIcon(true);
             }
 
@@ -69,7 +62,8 @@ export const TodoList = (props) => {
                         >
 
                             {showDeleteIcon && <DeleteIcon
-                                handleTodoDelete={() => handleTodoDelete(todo)}
+                                todo = {todo}
+                                handleTodoDelete={handleTodoDelete}
                             />}
 
                             <p className="text-light text-center">{todo}</p>
