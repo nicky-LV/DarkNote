@@ -30,8 +30,7 @@ body{
 }
 
 .todo-list-row{
-    height: 300px;
-    overflow: hidden;
+    min-height: 320px;
 }
 
 .todo-list-jumbotron{

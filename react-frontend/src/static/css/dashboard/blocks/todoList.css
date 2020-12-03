@@ -34,6 +34,10 @@
     line-height: 3rem;
 }
 
+.todo-name{
+    font-family: "Open Sans", "Poppins", serif;
+}
+
 .todo-list-container{
     width: 100%;
     height: 100%;
