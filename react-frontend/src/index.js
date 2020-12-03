@@ -4,9 +4,9 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import {RegisterForm} from "./components/login/LoginForm";
 import {LoginForm} from "./components/login/RegisterForm";
-import {Sidebar} from "./components/dashboard/sidebar/sidebar";
-import {RichTextEditor} from "./components/dashboard/draft-js/RichTextEditor";
-import {Layout} from "./components/dashboard/layout";
+import {Sidebar} from "./components/sidebar/sidebar";
+import {RichTextEditor} from "./components/draft-js/RichTextEditor";
+import {Layout} from "./components/layout";
 
 
 ReactDOM.render(<Sidebar />, document.getElementById("root"))

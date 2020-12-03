@@ -1,0 +1,83 @@
+.create-todo{
+    width: 100%;
+}
+
+.todo-list{
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.todo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-icon-div{
+    width: 30px;
+}
+
+.delete-todo-icon{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.todo-name-div{
+    width: 100%;
+    text-align: center;
+    padding-right: 2rem;
+    height: 3rem;
+    line-height: 3rem;
+}
+
+.todo-name{
+    font-family: "Poppins", "Open Sans", serif;
+    letter-spacing: 0.5px;
+}
+
+.create-todo-header{
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.todo-list-container{
+    width: 100%;
+    height: 100%;
+    margin-left: 1rem;
+}
+
+.add-todo-button-1{
+    width: 10%;
+    margin-left: 45%;
+    margin-right: 45%;
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+
+.add-todo-button-2{
+    box-shadow: none;
+    outline: none;
+}
+
+.delete-todo-icon{
+    float: left;
+}
+
+.form-control:focus{
+    box-shadow: none;
+    outline: none;
+    border: white;
+}
+
+.create-todo-back-button{
+    border: none;
+}
