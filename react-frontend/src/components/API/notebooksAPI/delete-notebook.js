@@ -11,5 +11,5 @@ export async function DeleteNotebookAPI(notebookSlug, notebookName){
             name: notebookName
         }
     }
-    return await axios.delete(`http://127.0.0.1:8000/api/notebook/delete/${notebookSlug}/`, payload_with_headers)
+    return await axios.delete(`https://django-react-297812.ew.r.appspot.com/api/notebook/delete/${notebookSlug}/`, payload_with_headers)
 }

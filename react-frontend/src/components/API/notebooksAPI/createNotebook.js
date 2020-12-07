@@ -5,6 +5,6 @@ export const CreateNotebookAPI = (name) => {
     const data = {
         name: name
     }
-    return axios.post("http://127.0.0.1:8000/api/notebook/create/", data, config)
+    return axios.post("https://django-react-297812.ew.r.appspot.com/api/notebook/create/", data, config)
 
 }
