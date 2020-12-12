@@ -10,7 +10,7 @@ export const RenameNotebookForm = (props) => {
         const payload = {
             name: data["notebook-name"]
         }
-        axios.patch(`http://127.0.0.1:8000/api/notebook/rename/${props.notebookSlug}/`, payload, config)
+        axios.patch(`https://django-react-297812.ew.r.appspot.com/api/notebook/rename/${props.notebookSlug}/`, payload, config)
             .then(res => {
                 props.handleFormSuccess()
                 }

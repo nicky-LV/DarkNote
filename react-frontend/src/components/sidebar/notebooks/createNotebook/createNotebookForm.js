@@ -11,7 +11,7 @@ export const CreateNotebookForm = (props) => {
         const payload = {
             'name': data['notebook-name']
         }
-        axios.post('http://127.0.0.1:8000/api/notebook/new/', payload, config)
+        axios.post('https://django-react-297812.ew.r.appspot.com/api/notebook/new/', payload, config)
             .then(res => {
                 if(res.data.user){
                     props.handleFormSuccess(data['notebook-name'])
