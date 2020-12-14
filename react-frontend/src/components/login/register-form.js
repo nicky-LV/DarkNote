@@ -2,9 +2,14 @@ import {useForm} from "react-hook-form";
 import axios from 'axios';
 import React from "react";
 import Cookies from 'js-cookie';
+import {animated, useSpring} from "react-spring";
 
 export function RegisterForm(){
     const {register, handleSubmit, errors, setError} = useForm();
+    const fadeIn = useSpring({
+        from: {opacity: 0},
+        to: {opacity: 1}
+    })
 
     const onSubmit = (data) =>{
 
@@ -33,55 +38,65 @@ export function RegisterForm(){
     }
 
     return(
-        <div className="container-fluid">
-            <form onSubmit={handleSubmit(onSubmit)}>
+        <animated.div className="container-fluid" style={fadeIn}>
+            <animated.form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-group">
-                    <label className="text-muted">Username</label>
+                    <label className="text-light">Username</label>
                     <input name="username" className="form-control" ref={register({
                         required: true, minLength: 4, maxLength: 20
                     })} />
+
+                    {errors.username && errors.username.type === "required" && <p className="text-danger"> Username is required </p>}
+                    {errors.username && errors.username.type === "maxLength" && <p className="text-danger"> Username is too long </p>}
+                    {errors.username && errors.username.type === "minLength" && <p className="text-danger"> Username is too short </p>}
+                    {errors.username && errors.username.type === "api" && <p className="text-danger"> {errors.username.message} </p>}
+
                 </div>
-                {errors.username && errors.username.type === "required" && "Username is required"}
-                {errors.username && errors.username.type === "maxLength" && "Username is too long"}
-                {errors.username && errors.username.type === "minLength" && "Username is too short"}
-                {errors.username && errors.username.type === "api" && errors.username.message}
+
 
                 <div className="form-group">
-                    <label className="text-muted">Email address</label>
+                    <label className="text-light">Email address</label>
                     <input name="email" className="form-control" ref={register(
                         {required: true}
                     )}/>
+                    {errors.email && errors.email.type === "required" && <p className="text-danger"> Email is required </p>}
+                    {errors.email && errors.email.type === "api" && <p className="text-danger"> {errors.email.message} </p>}
                 </div>
-                {errors.email && errors.email.type === "api" && errors.email.message}
+
+
 
 
                 <div className="form-group">
-                    <label className="text-muted">Password</label>
+                    <label className="text-light">Password</label>
                     <input name="password" className="form-control" ref={register({
                         required: true, maxLength: 30, minLength: 6
                     })} />
+
+                    {errors.password && errors.password.type === "required" && <p className="text-danger"> Password is required </p>}
+                    {errors.password && errors.password.type === "maxLength" && <p className="text-danger">Password is too long (>30 characters) </p>}
+                    {errors.password && errors.password.type === "minLength" && <p className="text-danger">Password is too short </p>}
                 </div>
-                {errors.password && errors.password.type === "required" && "Password is required"}
-                {errors.password && errors.password.type === "maxLength" && "Password is too long (>30 characters)"}
-                {errors.password && errors.password.type === "minLength" && "Password is too short"}
+
 
                 <div className="form-group">
-                    <label className="text-muted">Confirm password</label>
+                    <label className="text-light">Confirm password</label>
                     <input name="confirm_password" className="form-control" ref={register({
                         required: true, maxLength: 30, minLength: 6
                     })}/>
+
+                    {errors.confirm_password && errors.confirm_password.type === "required" && <p className="text-danger"> Password is required </p>}
+                    {errors.confirm_password && errors.confirm_password.type === "maxLength" && <p className="text-danger"> Password is too long (>30 characters) </p>}
+                    {errors.confirm_password && errors.confirm_password.type === "minLength" && <p className="text-danger">Password is too short </p>}
+                    {errors.confirm_password && errors.confirm_password.type === "doesNotMatch" && <p className="text-danger"> {errors.confirm_password.message} </p>}
                 </div>
-                {errors.confirm_password && errors.confirm_password.type === "required" && "Password is required"}
-                {errors.confirm_password && errors.confirm_password.type === "maxLength" && "Password is too long (>30 characters)"}
-                {errors.confirm_password && errors.confirm_password.type === "minLength" && "Password is too short"}
-                {errors.confirm_password && errors.confirm_password.type === "doesNotMatch" && errors.confirm_password.message}
+
 
                 <div className="form-group">
                     <input type="submit" />
                 </div>
 
-            </form>
-        </div>
+            </animated.form>
+        </animated.div>
     )
 
 
