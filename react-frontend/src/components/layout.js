@@ -7,33 +7,30 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import {UserLoginInterface} from "./login/user-login-interface";
 
 export class Layout extends React.Component{
 
     render(){
         return(
-            <div className="container-fluid">
                 <Router>
-                    <Switch exact path="/">
-                        <h1>Hi!</h1>
-                    </Switch>
                     <Switch>
-                        <Route exact path="/dashboard/">
+                        <Route exact path="/">
+
+                            <UserLoginInterface />
+
+                        </Route>
+
+                        <Route exact path="/dashboard">
+
                             <div className="row" style={{height:"100vh"}}>
                                 <Sidebar />
-                                <div className="col">
-                                    <div className="row">
-                                        <div className="col-md" id="rich-text-editor">
-                                            <RichTextEditor />
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
+
                         </Route>
                     </Switch>
                 </Router>
 
-            </div>
         )
     }
 }

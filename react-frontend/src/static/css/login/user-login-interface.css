@@ -1,0 +1,71 @@
+.landing-page-container{
+    background-color: #051C2C;
+
+    background-size: contain;
+    height: 100vh;
+    width: 100%;
+}
+
+#focus{
+    background-color: #1E2027;
+}
+
+.title{
+    color: whitesmoke;
+    font-family: Poppins, sans-serif;
+    font-weight: 900;
+    font-size: 2.5em;
+}
+
+.standout-text{
+    font-family: Poppins, sans-serif;
+    font-weight: 900;
+    font-size: 1em;
+}
+
+.description{
+    color: #ced4da;
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.see-more{
+    border-color: #FF8D72;
+}
+
+.see-more:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.features{
+    margin-top: 25%;
+    border-top: 1px solid #FF8D72;
+    border-left: 1px solid #FF8D72;
+    border-right: 1px solid #FF8D72;
+    border-radius: 5px;
+    padding: 50px;
+}
+
+.feature-title{
+    color: whitesmoke;
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+}
+
+.icon-container{
+    background-color: #051C2C;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    display: block;
+    margin-top: -45px;
+    left: -25px;
+    z-index: 2;
+}
+.feature-icon{
+    width: 50px;
+    height: 50px;
+    opacity: 0.8;
+}

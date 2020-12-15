@@ -1,6 +1,7 @@
 .notebook-list{
     background-color: #1E2027;
     height: 100vh;
+    overflow-y: auto;
 }
 
 .notebook-button{
