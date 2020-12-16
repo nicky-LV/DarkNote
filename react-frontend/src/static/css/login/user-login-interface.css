@@ -4,6 +4,7 @@
     background-size: contain;
     height: 100vh;
     width: 100%;
+    overflow-y: hidden;
 }
 
 #focus{
@@ -28,10 +29,12 @@
     font-family: Poppins, sans-serif;
     font-weight: 500;
     font-size: 16px;
+    width: max-content;
 }
 
 .see-more{
     border-color: #FF8D72;
+    color: #FF8D72;
 }
 
 .see-more:focus{
@@ -40,12 +43,15 @@
 }
 
 .features{
-    margin-top: 25%;
     border-top: 1px solid #FF8D72;
     border-left: 1px solid #FF8D72;
     border-right: 1px solid #FF8D72;
     border-radius: 5px;
-    padding: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    position: absolute;
+    bottom: 0;
 }
 
 .feature-title{
