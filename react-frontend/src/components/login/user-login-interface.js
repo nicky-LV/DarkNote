@@ -19,8 +19,8 @@ export const UserLoginInterface = (props) => {
     }) // todo: would it be possible to add an animated underline?
 
     const popUpAnimation = useSpring({
-        from: {fontSize: "0px"},
-        to: {fontSize: "16px"},
+        from: {opacity: 0},
+        to: {opacity: 1},
         delay: 1000,
         config: {
             clamp: true,
@@ -37,11 +37,17 @@ export const UserLoginInterface = (props) => {
             config: config.stiff
         }
     })
+
+    const featuresAnimation = useSpring({
+        from: {marginBottom: -300, opacity: 0},
+        to: {marginBottom: 0, opacity: 1},
+        delay: 1500
+    })
     return(
         <div className="container-fluid landing-page-container">
             <div className="container my-auto h-100">
                 <div className="row h-100">
-                    <div className="col-md-6 introduction my-auto" style={{"width": "max-content"}}>
+                    <div className="col-md-6 introduction my-auto">
                         <h1 className="title">
                             Your notes.
                             <br />
@@ -61,38 +67,40 @@ export const UserLoginInterface = (props) => {
                         </animated.button>
                     </div>
 
-                    <div className="col-md-6 features">
-                        {/* Since this is static, we can make it into an object and then .map() */}
-                        <div className="feature">
-                            <h4 className="feature-title"> Offline notes</h4>
-                            <div className="icon-container">
-                                <img src={greenIcon} className="feature-icon" alt="By downloading your notes, you can read and edit them offline."/>
+                    <div className="col-md-6">
+                        <animated.div className="features" style={featuresAnimation}>
+                            {/* Since this is static, we can make it into an object and then .map() */}
+                            <div className="feature">
+                                <h4 className="feature-title"> Offline notes</h4>
+                                <div className="icon-container">
+                                    <img src={greenIcon} className="feature-icon" alt="By downloading your notes, you can read and edit them offline."/>
+                                </div>
+                                <p className="description">
+                                    Download your notes to view and continue writing offline.
+                                </p>
                             </div>
-                            <p className="description">
-                                Download your notes to view and continue writing offline.
-                            </p>
-                        </div>
-                        <div className="feature pt-5">
-                            <h4 className="feature-title">Elegant</h4>
-                            <div className="icon-container">
-                                <img src={orangeIcon} className="feature-icon" alt="By downloading your notes, you can read and edit them offline."/>
+                            <div className="feature pt-5">
+                                <h4 className="feature-title">Elegant</h4>
+                                <div className="icon-container">
+                                    <img src={orangeIcon} className="feature-icon" alt="By downloading your notes, you can read and edit them offline."/>
+                                </div>
+                                <p className="description">
+                                    Our soothing dark theme is easy on the eyes.
+                                </p>
                             </div>
-                            <p className="description">
-                                Our soothing dark theme is easy on the eyes.
-                            </p>
-                        </div>
-                        <div className="feature pt-5">
-                            <h4 className="feature-title">
-                                Fast
-                            </h4>
-                            <div className="icon-container">
-                                <img src={pinkIcon} className="feature-icon" alt="By downloading your notes, you can read and edit them offline."/>
-                            </div>
+                            <div className="feature pt-5 pb-4">
+                                <h4 className="feature-title">
+                                    Fast
+                                </h4>
+                                <div className="icon-container">
+                                    <img src={pinkIcon} className="feature-icon" alt="By downloading your notes, you can read and edit them offline."/>
+                                </div>
 
-                            <p className="description">
-                                Simple and concise, our notebook allows you get stuff done. Quickly.
-                            </p>
-                        </div>
+                                <p className="description">
+                                    Simple and concise, our notebook allows you get stuff done. Quickly.
+                                </p>
+                            </div>
+                        </animated.div>
                     </div>
                 </div>
             </div>
