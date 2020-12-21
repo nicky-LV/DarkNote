@@ -1,14 +1,9 @@
-import {LoginRegisterSelector} from "./login-register-selector";
 import "../../static/css/login/user-login-interface.css";
-import {animated, useSpring, config} from "react-spring";
-import {useState, useRef, useLayoutEffect} from "react";
-import greenIcon from '../../static/images/green.png';
-import orangeIcon from '../../static/images/orange.png';
-import pinkIcon from '../../static/images/pink.png';
 import {Features} from "./features";
 import {Introduction} from "./introduction";
 import {StickyNavbar} from "../landing-page/navbar/navbar";
-import {UserLogin} from "../landing-page/login/login";
+import {UserLogin} from "./user-login";
+import notesIllustration from '../../static/images/undraw_on_the_office_fbfs.svg';
 
 export const UserLoginInterface = (props) => {
 
@@ -18,8 +13,8 @@ export const UserLoginInterface = (props) => {
                 <div className="row h-100">
                     <StickyNavbar />
                     <Introduction />
-                    <div className="col-md-6">
-                        <Features />
+                    <div className="col-md-6 my-auto">
+                        <img src={notesIllustration} alt="Person managing their notes" className="using-notes-icon"/>
                     </div>
                 </div>
                  <div className="row h-100 login-section">

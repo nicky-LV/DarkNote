@@ -62,7 +62,7 @@ export const Introduction = (props) => {
                 style={buttonAnimation}
                 className="btn see-more center-block"
             >
-                See more
+                Get started
             </animated.button>
         </div>
     )

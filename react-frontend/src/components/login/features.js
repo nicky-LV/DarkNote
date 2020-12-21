@@ -10,10 +10,10 @@ export const Features = (props) => {
         delay: 800
     })
     return (
-        <animated.div className="features" style={featuresAnimation}>
+        <animated.div className="features my-auto" style={featuresAnimation}>
             {/* Since this is static, we can make it into an object and then .map() */}
             <div className="feature">
-                <h4 className="feature-title"> Offline notes</h4>
+                <h4 className="feature-title"> Offline notes </h4>
                 <div className="icon-container">
                     <img src={greenIcon} className="feature-icon" alt="By downloading your notes, you can read and edit them offline."/>
                 </div>
@@ -22,7 +22,7 @@ export const Features = (props) => {
                 </p>
             </div>
             <div className="feature pt-5">
-                <h4 className="feature-title">Elegant</h4>
+                <h4 className="feature-title"> Elegant </h4>
                 <div className="icon-container">
                     <img src={orangeIcon} className="feature-icon" alt="By downloading your notes, you can read and edit them offline."/>
                 </div>
@@ -30,7 +30,7 @@ export const Features = (props) => {
                     Our soothing dark theme is easy on the eyes.
                 </p>
             </div>
-            <div className="feature pt-5 pb-4">
+            <div className="feature pt-5">
                 <h4 className="feature-title">
                     Fast
                 </h4>
