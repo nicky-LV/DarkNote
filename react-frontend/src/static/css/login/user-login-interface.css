@@ -19,6 +19,8 @@
     font-family: Poppins, sans-serif;
     font-weight: 900;
     font-size: 1em;
+    color: #FF8D72;
+    height: 100px;
 }
 
 .description{
@@ -34,22 +36,24 @@
     color: #FF8D72;
 }
 
+.see-more:hover{
+    background-color: #FF8D72;
+    color: black;
+}
+
 .see-more:focus{
     outline: none;
     box-shadow: none;
 }
 
+.using-notes-icon{
+    width: 85%;
+    height: 85%;
+}
+
 .features{
-    border-top: 1px solid #FF8D72;
-    border-left: 1px solid #FF8D72;
-    border-right: 1px solid #FF8D72;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
     padding-left: 50px;
     padding-right: 50px;
-    padding-top: 50px;
-    position: absolute;
-    bottom: 0;
 }
 
 .feature-title{
@@ -72,4 +76,12 @@
     width: 50px;
     height: 50px;
     opacity: 0.8;
+}
+
+.introduction{
+    width: max-content;
+}
+
+.padding-inherit{
+    padding: inherit;
 }
