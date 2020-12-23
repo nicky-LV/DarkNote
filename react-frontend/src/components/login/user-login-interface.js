@@ -10,17 +10,19 @@ export const UserLoginInterface = (props) => {
     return(
         <div className="container-fluid landing-page-container">
             <div className="container my-auto h-100">
-                <div className="row h-100">
+                <div className="row">
                     <StickyNavbar />
-                    <Introduction />
-                    <div className="col-md-6 my-auto">
-                        <img src={notesIllustration} alt="Person managing their notes" className="using-notes-icon"/>
-                    </div>
                 </div>
-                 <div className="row h-100 login-section">
-                     <UserLogin />
-                 </div>
+            <div className="row h-100">
+                <Introduction />
+                <div className="col-md-6 my-auto">
+                    <img src={notesIllustration} alt="Person managing their notes" className="using-notes-icon"/>
+                </div>
             </div>
-        </div>)
+            <div className="row h-100 login-section">
+                <UserLogin />
+            </div>
+        </div>
+</div>)
 
 }

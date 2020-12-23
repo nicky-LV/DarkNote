@@ -1,15 +1,19 @@
 import {useForm} from "react-hook-form";
 import axios from 'axios';
-import React from "react";
+import React, {useState} from "react";
 import Cookies from 'js-cookie';
 import {animated, useSpring} from "react-spring";
+import {Button} from "react-bootstrap";
+import {Redirect, useHistory} from "react-router";
 
-export function RegisterForm(){
+export const RegisterForm = (props) => {
     const {register, handleSubmit, errors, setError} = useForm();
     const fadeIn = useSpring({
         from: {opacity: 0},
         to: {opacity: 1}
     })
+    const [redirect, setRedirect] = useState(false);
+    const history = useHistory();
 
     const onSubmit = (data) =>{
 
@@ -18,6 +22,7 @@ export function RegisterForm(){
             axios.post("http://127.0.0.1:8000/api/register/", data)
                 .then(res => {
                     Cookies.set("token", res.data.token)
+                    setRedirect(true);
                 })
                 .catch(err => {
                     const response = err.response.data
@@ -34,11 +39,15 @@ export function RegisterForm(){
         else{
             setError("confirm_password", {type: "doesNotMatch", message: "Passwords do not match"})
         }
+    }
 
+    if (redirect) {
+        console.log(redirect)
+        history.push('/dashboard')
     }
 
     return(
-        <animated.div className="container-fluid" style={fadeIn}>
+        <animated.div className="container-fluid p-0" style={fadeIn}>
             <animated.form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-group">
                     <label className="text-light">Username</label>
@@ -92,7 +101,15 @@ export function RegisterForm(){
 
 
                 <div className="form-group">
-                    <input type="submit" />
+                    <div className="row">
+                        <div className="col">
+                            <Button variant="danger" onClick={props.handleReset}>Back</Button>
+                        </div>
+
+                        <div className="col d-flex justify-content-end">
+                            <Button variant="success" type="submit">Submit</Button>
+                        </div>
+                    </div>
                 </div>
 
             </animated.form>
