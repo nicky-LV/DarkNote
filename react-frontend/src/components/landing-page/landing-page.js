@@ -1,7 +1,6 @@
 import "../../static/css/login/user-login-interface.css";
 import {Features} from "./features/features";
 import {Introduction} from "./introduction/introduction";
-import {StickyNavbar} from "../landing-page/navbar/navbar";
 import {UserLogin} from "./user-login";
 import notesIllustration from '../../static/images/undraw_on_the_office_fbfs.svg';
 
@@ -11,7 +10,7 @@ export const LandingPage = (props) => {
         <div className="container-fluid landing-page-container">
             <div className="container my-auto h-100">
                 <div className="row">
-                    <StickyNavbar />
+                    Navbar here
                 </div>
             <div className="row h-100">
                 <Introduction />
