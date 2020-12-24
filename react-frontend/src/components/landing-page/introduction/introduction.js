@@ -1,4 +1,5 @@
 import {animated, config, useSpring} from "react-spring";
+import './introduction.css';
 
 export const Introduction = (props) => {
     // useLayoutEffect should be used when working with the DOM. useEffect will run after content is shown to the user (which can be unpleasant).

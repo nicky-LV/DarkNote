@@ -7,7 +7,7 @@ import {
     Route,
     Link
 } from "react-router-dom";
-import {UserLoginInterface} from "./login/user-login-interface";
+import {LandingPage} from "./landing-page/landing-page";
 
 export class Layout extends React.Component{
 
@@ -17,7 +17,7 @@ export class Layout extends React.Component{
                     <Switch>
                         <Route exact path="/">
 
-                            <UserLoginInterface />
+                            <LandingPage />
 
                         </Route>
 

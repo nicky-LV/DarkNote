@@ -1,11 +1,11 @@
 import "../../static/css/login/user-login-interface.css";
-import {Features} from "./features";
-import {Introduction} from "./introduction";
+import {Features} from "./features/features";
+import {Introduction} from "./introduction/introduction";
 import {StickyNavbar} from "../landing-page/navbar/navbar";
 import {UserLogin} from "./user-login";
 import notesIllustration from '../../static/images/undraw_on_the_office_fbfs.svg';
 
-export const UserLoginInterface = (props) => {
+export const LandingPage = (props) => {
 
     return(
         <div className="container-fluid landing-page-container">

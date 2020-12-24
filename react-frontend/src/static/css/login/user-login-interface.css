@@ -8,58 +8,9 @@
     background-color: #1E2027;
 }
 
-.title{
-    color: whitesmoke;
-    font-family: Poppins, sans-serif;
-    font-weight: 900;
-    font-size: 2.5em;
-}
-
-.standout-text{
-    font-family: Poppins, sans-serif;
-    font-weight: 900;
-    font-size: 1em;
-    color: #FF8D72;
-    height: 100px;
-}
-
-.description{
-    color: #ced4da;
-    font-family: Poppins, sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    width: max-content;
-}
-
-.see-more{
-    border-color: #FF8D72;
-    color: #FF8D72;
-}
-
-.see-more:hover{
-    background-color: #FF8D72;
-    color: black;
-}
-
-.see-more:focus{
-    outline: none;
-    box-shadow: none;
-}
-
 .using-notes-icon{
     width: 85%;
     height: 85%;
-}
-
-.features{
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-.feature-title{
-    color: whitesmoke;
-    font-family: Poppins, sans-serif;
-    font-weight: 500;
 }
 
 .icon-container{

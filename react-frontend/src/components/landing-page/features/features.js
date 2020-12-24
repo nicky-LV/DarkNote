@@ -1,7 +1,8 @@
-import greenIcon from "../../static/images/green.png";
-import orangeIcon from "../../static/images/orange.png";
-import pinkIcon from "../../static/images/pink.png";
+import greenIcon from "../../../static/images/green.png";
+import orangeIcon from "../../../static/images/orange.png";
+import pinkIcon from "../../../static/images/pink.png";
 import {animated, useSpring} from "react-spring";
+import './features.css';
 
 export const Features = (props) => {
     const featuresAnimation = useSpring({

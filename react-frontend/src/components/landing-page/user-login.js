@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import {config, useSpring, animated} from "react-spring";
 import '../../static/css/login/user-login.css';
-import {Features} from "./features";
-import {LoginForm} from "./login-form";
-import {RegisterForm} from "./register-form";
+import {Features} from "./features/features";
+import {LoginForm} from "./forms/login-form";
+import {RegisterForm} from "./forms/register-form";
 
 export const UserLogin = (props) => {
     const [registerForm, showRegisterForm] = useState(false);
