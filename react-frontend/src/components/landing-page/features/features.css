@@ -3,8 +3,19 @@
     padding-right: 50px;
 }
 
+.features-header{
+    font-family: Poppins, sans-serif;
+    font-weight: 900;
+    color: #FF8D72;
+}
+
 .feature-title{
     color: whitesmoke;
     font-family: Poppins, sans-serif;
     font-weight: 500;
+}
+
+.feature{
+    border-left: 5px solid white;
+    padding-left: 15px;
 }
