@@ -30,6 +30,7 @@ export const LandingPage = (props) => {
             </div>
 
                 <div className="row login-section">
+                    <!-- todo: add login section -->
                 </div>
         </div>
 </div>)
