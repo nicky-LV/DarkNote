@@ -9,7 +9,7 @@ export const Features = (props) => {
         delay: 800
     })
     return (
-        <animated.div className="features my-auto px-0" style={featuresAnimation}>
+        <animated.div className="features my-auto px-0 pb-3" style={featuresAnimation}>
             <h1 className="header mb-5">Features</h1>
             {/* Since this is static, we can make it into an object and then .map() */}
             <div className="feature">
@@ -30,7 +30,7 @@ export const Features = (props) => {
                 </h4>
 
                 <p className="description">
-                    Simple and concise, our notebook allows you get stuff done. Quickly.
+                    Simple and concise, achieve your goals faster.
                 </p>
             </div>
         </animated.div>
