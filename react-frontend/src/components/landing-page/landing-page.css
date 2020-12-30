@@ -16,6 +16,10 @@
     padding-left: 20%;
 }
 
+.login-section{
+    min-height: 570px;
+}
+
 .login-section-body{
     width: fit-content;
 }
