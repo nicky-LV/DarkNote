@@ -10,8 +10,13 @@
 }
 
 .arrow{
-    position: absolute;
+    position: relative;
     height: 100%;
     margin-top: 15%;
     padding-left: 20%;
+}
+
+.login-section{
+    height: 100vh;
+    margin-top: 15%;
 }

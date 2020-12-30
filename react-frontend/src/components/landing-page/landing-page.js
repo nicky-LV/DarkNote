@@ -4,10 +4,17 @@ import {Introduction} from "./introduction/introduction";
 import notesIllustration from '../../static/images/undraw_on_the_office_fbfs.svg';
 import Logo from "../../static/images/Logo.svg";
 import Arrow from "../../static/images/Arrow.svg";
-import React from "react";
+import React, {useLayoutEffect, useState} from "react";
+import Cookies from 'js-cookie';
+import {RegisterForm} from "./forms/register-form";
+import {LoginForm} from "./forms/login-form";
 
 export const LandingPage = (props) => {
+    const [loggedIn, setLoggedIn] = useState(null)
 
+    useLayoutEffect(() => {
+        setLoggedIn(Cookies.get("token") !== null)
+    })
     return(
         <div className="container-fluid landing-page-container">
             <div className="container my-auto h-100">
@@ -24,14 +31,10 @@ export const LandingPage = (props) => {
                 <div className="col-md">
                     <Features/>
                 </div>
-                <div className="col-md">
-                    <img src={Arrow} alt="Arrow pointing to login section" className="arrow" />
+                <div className="col-md mt-sm-3">
+                    <h1 className="header mb-5">{loggedIn ? "Login" : "Register"}</h1>
                 </div>
             </div>
-
-                <div className="row login-section">
-                    <!-- todo: add login section -->
-                </div>
         </div>
 </div>)
 

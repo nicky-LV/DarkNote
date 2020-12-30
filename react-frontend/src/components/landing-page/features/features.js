@@ -10,7 +10,7 @@ export const Features = (props) => {
     })
     return (
         <animated.div className="features my-auto px-0" style={featuresAnimation}>
-            <h1 className="features-header mb-5">Features</h1>
+            <h1 className="header mb-5">Features</h1>
             {/* Since this is static, we can make it into an object and then .map() */}
             <div className="feature">
                 <h4 className="feature-title"> Offline notes </h4>
