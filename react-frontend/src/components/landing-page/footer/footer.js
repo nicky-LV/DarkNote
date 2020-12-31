@@ -1,16 +1,16 @@
 import {Navbar, Nav} from "react-bootstrap";
+import './footer.css';
+import github from "../../../static/images/github.png";
 
 export const Footer = (props) => {
     return(
-        <div className="container-fluid">
-            <Navbar sticky="bottom" bg="dark" variant="dark">
-                <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-                <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#features">Features</Nav.Link>
-                    <Nav.Link href="#pricing">Pricing</Nav.Link>
-                </Nav>
-            </Navbar>
-        </div>
+        <Navbar sticky="bottom" className="w-100" variant="dark">
+            <Nav className="mr-auto align-items-center">
+                <Nav.Link href="https://github.com/nicky-LV/DarkNote" className="align-items-center">
+                            <img src={github} alt="Github link" height="30px" width="30px" />
+                </Nav.Link>
+            </Nav>
+
+        </Navbar>
     )
 }

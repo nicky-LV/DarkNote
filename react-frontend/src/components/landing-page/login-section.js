@@ -12,15 +12,17 @@ export const LoginSection = (props) => {
             <h1 className="header mb-5">{loggedIn ? "Login" : "Register"}</h1>
             <p className="description mb-5">{loggedIn ? "Ready to continue your note-taking journey?" : "Register to create your notebook."}</p>
             {loggedIn && !showForm?
-                <div className="login-section-body w-100">
+                <div className="login-section-body w-100" id="login-section">
                     <button
-                        className="btn see-more center-block mx-auto description mb-2 border-0"
+                        className="btn see-more center-block description border-0"
+                        style={{"margin-left":"25%", "width":"50%"}}
                         onClick={() => setShowForm(true)}>
                         Continue to notebook
                     </button>
-                    <p className="text-center text-light">or</p>
+                    <p className="text-center text-light mt-3">or</p>
                     <button
-                        className="btn see-more center-block description border-0 mt-2"
+                        className="btn see-more center-block description border-0"
+                        style={{"margin-left":"25%", "width":"50%"}}
                         onClick = {(e) => {
                             e.preventDefault()
                             setShowForm(true);

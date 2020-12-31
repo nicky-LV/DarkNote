@@ -1,5 +1,6 @@
 import {animated, config, useSpring} from "react-spring";
 import './introduction.css';
+import {Link} from "react-scroll";
 
 export const Introduction = (props) => {
     // useLayoutEffect should be used when working with the DOM. useEffect will run after content is shown to the user (which can be unpleasant).
@@ -48,13 +49,14 @@ export const Introduction = (props) => {
                     <br />
                     Blazingly fast.
                 </animated.p>
-
-                <animated.button
-                    style={buttonAnimation}
-                    className="btn see-more center-block"
-                >
-                    Get started
-                </animated.button>
+                <Link to="login-section" spy={true} smooth={true}>
+                    <animated.button
+                        style={buttonAnimation}
+                        className="btn see-more center-block"
+                    >
+                        Get started
+                    </animated.button>
+                </Link>
             </div>
         </div>
     )
