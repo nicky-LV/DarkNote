@@ -7,6 +7,6 @@ export function DeleteNoteAPI(noteSlug){
             Authorization: "Token " + Cookies.get("token")
         }
     }
-    return axios.delete(`http://127.0.0.1:8000/api/note/delete/${noteSlug}`, config)
+    return axios.delete(`https://django-react-297812.ew.r.appspot.com/api/note/delete/${noteSlug}`, config)
 
 }

@@ -2,5 +2,5 @@ import axios from 'axios';
 import {config} from "../config";
 
 export async function RetrieveNotesAPI(notebookSlug){
-    return await axios.get(`http://127.0.0.1:8000/api/note/get/${notebookSlug}/`, config)
+    return await axios.get(`https://django-react-297812.ew.r.appspot.com/api/note/get/${notebookSlug}/`, config)
 }

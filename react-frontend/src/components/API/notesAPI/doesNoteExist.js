@@ -8,6 +8,6 @@ export function doesNoteExist(noteSlug){
             Authorization: "Token " + Cookies.get("token")
         }
     }
-    const request = axios.get(`http://127.0.0.1:8000/api/note/exists/${noteSlug}/`, config)
+    const request = axios.get(`https://django-react-297812.ew.r.appspot.com/api/note/exists/${noteSlug}/`, config)
     return request
 }

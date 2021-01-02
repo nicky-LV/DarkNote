@@ -9,7 +9,7 @@ export function updateNote(data, notebookSlug, noteSlug) {
         }
     }
 
-        axios.patch(`http://127.0.0.1:8000/api/note/update/${notebookSlug}/${noteSlug}/`,
+        axios.patch(`https://django-react-297812.ew.r.appspot.com/api/note/update/${notebookSlug}/${noteSlug}/`,
                 data, config)
                 .then(res => {
                         console.log(res.data)
